@@ -1,0 +1,32 @@
+class Solution {
+    public boolean isHappy(int n) {
+        if(n == 1) return true;
+        List<Integer> values = new ArrayList<>(); // To check for repeated number and exit!
+        int value = n;
+        while(value != 1) {
+            int runningSum = 0;
+            List<Integer> digits = fetchDigits(value);
+            for(int i : digits) {
+                runningSum += Math.pow(i, 2); 
+            }
+            value = runningSum;
+            if(values.contains(value)) {
+                return false;
+            } else {
+                values.add(value);
+            }
+        }
+        return true;
+    }
+    
+    // Fetch all digits for a number.
+    private List<Integer> fetchDigits(int n) { 
+        List<Integer> digits = new ArrayList<>();
+        String number = String.valueOf(n);
+        for(int i = 0; i < number.length(); i++) {
+            int j = Character.digit(number.charAt(i), 10);
+            digits.add(j);
+        }
+        return digits;
+    }
+}
