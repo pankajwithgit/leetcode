@@ -1,0 +1,42 @@
+class Solution {
+    public String reverseStr(String s, int k) {
+        StringBuilder sb = new StringBuilder();
+        traverseString(s, k, sb, 0);
+        return sb.toString();
+    }
+    
+    private void traverseString(String s, int k, StringBuilder sb, int round) {
+        boolean isOver = false;
+        if(s.isEmpty()) return;
+        String subStr = null;
+        if(s.length() > k) {
+            subStr = s.substring(0, k);            
+        } else {
+            subStr = s;
+            isOver = true;
+        }
+        // Check if this is reverse case or not. Reverse case would alternately come.
+        if(round % 2 == 0) {
+            subStr = reverseString(subStr);
+        }
+        sb.append(subStr);
+        if(!isOver) {
+            // If we left with string yet, traverse again.
+            traverseString(s.substring(k), k, sb, round + 1);
+        }
+    }
+    
+    private String reverseString(String s) {
+        char[] chars = s.toCharArray();
+        int start = 0;
+        int end = s.length() - 1;
+        while(start < end) {
+            char temp = chars[start];
+            chars[start] = chars[end];
+            chars[end] = temp;
+            start++;
+            end--;
+        }
+        return new String(chars);
+    }
+}
