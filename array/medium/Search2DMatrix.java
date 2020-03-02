@@ -18,7 +18,7 @@ class Solution {
             if(matrix[i][0] > target) {
                 return false;
             }
-            // Check if element is in current array in iteration, is yes, do binary search. 
+            // Check if element is in current array in iteration, if yes, do binary search. 
             if(matrix[i][0] < target && matrix[i][width - 1] > target) {
                 return binarySearch(matrix[i], target);
             }
