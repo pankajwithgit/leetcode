@@ -1,5 +1,6 @@
 // It's a DP problem. We will continue to maintain and use min jumps required to reach
 // each element and ultimately find out steps to reach last index. 
+// O(n^2) time and O(n) space
 class Solution {
     public int jump(int[] nums) {
         if(nums == null) return 0;
