@@ -14,8 +14,10 @@ class Solution {
 				while (x < y) {
 					if (nums[x] + nums[y] == sum) {
 						result.add(Arrays.asList(nums[x], nums[y], nums[i]));
+						// In order to avoid dups triplets, skip same element from front side.
 						while (x < y && nums[x] == nums[x + 1])
 							x++;
+						// In order to avoid dups triplets, skip same element from back side.
 						while (x < y && nums[y] == nums[y - 1])
 							y--;
 						x++;
