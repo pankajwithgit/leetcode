@@ -18,7 +18,7 @@ class Solution {
         });
         List<int[]> list = new LinkedList<int[]>();
         for (int[] cur : people) {
-            list.add(cur[1], cur);
+            list.add(cur[1], cur); // list.add will append the element at specified index, by shifting other elements to right.
         }
         return list.toArray(new int[people.length][2]);
     }
