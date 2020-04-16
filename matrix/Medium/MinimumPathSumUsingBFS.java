@@ -1,4 +1,5 @@
 // We can solve this problem with BFS. But it will consume a lot more time for processing for larger inputs. A DP solution works perfectly.
+// DP SOlution: https://github.com/pankajwithgit/leetcode/blob/master/dp/MinimumPathSumUsingDP.java
 class Solution {
     public int minPathSum(int[][] grid) {
         // base case
