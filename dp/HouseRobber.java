@@ -23,6 +23,6 @@ class Solution {
             }
             cache[i] = nums[i] + Math.max(firstOption, secondOption);
         }
-        return Math.max(cache[0], cache[1]);
+        return Math.max(cache[0], cache[1]); // because either first or second index will have max value.
     }
 }
