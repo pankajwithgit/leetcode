@@ -1,6 +1,7 @@
 /* We can't rob any two subsequent houses. Hence, for every house, we have to skip robbing very next house. This is a typical
 DP problem. So, for a index i, we have to skip i+1 index and rob either i+2 or i+3 index houses, whichever is max. We will
 start to build cache from back end to the front.
+same as: https://github.com/pankajwithgit/Data-Structures/blob/master/src/com/test/arrays/MaxSumOfNonAdjElements.java
 */
 class Solution {
     public int rob(int[] nums) {
