@@ -1,5 +1,6 @@
 /*
 In-place solution. Asked by dropbox.
+Daily Coding Problem: Problem #39 [Medium]
 */
 public class Solution {
     public void gameOfLife(int[][] board) {
