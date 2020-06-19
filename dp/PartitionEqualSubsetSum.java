@@ -1,4 +1,7 @@
-/* DP solution. Explanation: https://leetcode.com/problems/partition-equal-subset-sum/discuss/90592/01-knapsack-detailed-explanation
+/* DP solution. 
+Explanations: 
+https://leetcode.com/problems/partition-equal-subset-sum/discuss/90592/01-knapsack-detailed-explanation
+https://leetcode.com/problems/partition-equal-subset-sum/discuss/90592/01-knapsack-detailed-explanation/431026
 We can start with 2D array DP and eventually optimize it to 1D array DP.
 */
 class Solution {
