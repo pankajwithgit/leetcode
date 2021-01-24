@@ -1,4 +1,4 @@
-// Here are the steps will will follow :
+// Here are the steps we will follow :
 // 1. Find the frequency of each number for each array and populate their frequency maps respectively.
 // 2. Prepare a priority queue with elements from both maps and sort in decending order of their frequencies.
 // 3. Process each element in queue to find min rotations.
